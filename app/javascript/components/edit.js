@@ -8,7 +8,7 @@ export const Edit = () => {
     const location = useLocation();
     const history = useHistory()
     console.log(location);
-    axios.get(`https://jsonplaceholder.typicode.com/users/${location.state}`)
+    axios.get(`/users/${location.state}`)
     .then(response => setUsers(response.data))
     .catch(error => console.log(error))
 
@@ -29,7 +29,7 @@ export const Edit = () => {
         <>
         <h1>{users.name}</h1>
         <input value={name} onChange={handleChange}>{users.name}</input>
-        <button onClick={updateUser}>作成</button>
+        <button onClick={updateUser}>編集</button>
 
         </>
     )

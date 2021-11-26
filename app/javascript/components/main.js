@@ -41,7 +41,6 @@ export const Main = () => {
   return (
   <div>
     <input value={title} onChange={handleChange} />
-    <input value={text} onChange={handleChange} />
     <button onClick={createNewUser}>作成</button>
       <ul>
     {datas.map((data, index) => (
